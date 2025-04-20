@@ -61,7 +61,7 @@ const AdminAuth = () => {
               isLoad ? "cursor-no-drop" : "active:bg-blue-400 cursor-pointer"
             } bg-blue-500 font-semibold text-white text-lg p-1 mb-3`}
           >
-            {isLoad ? "Yuklanmoqda..." : "Kirish"}
+            {isLoad ? "Yuklanmoqda..." : "Kirish"} 
           </button>
           <div className="text-center text-red-600 text-md">{errorMessage}</div>
         </form>
