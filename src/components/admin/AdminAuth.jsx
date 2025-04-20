@@ -21,7 +21,7 @@ const AdminAuth = () => {
       sessionStorage.setItem("admin", JSON.stringify(response.data));
       navigate("/admin/home");
     } catch (error) {
-      setErrorMessage("Email yoki parol xato");
+      setErrorMessage("Xatolika:" + error.essage);
       setTimeout(() => setErrorMessage(null), 2000);
       constole.error(error);
     } finally {
