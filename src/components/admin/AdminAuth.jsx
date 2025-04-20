@@ -14,7 +14,7 @@ const AdminAuth = () => {
     try {
       setIsLoad(true);
       const response = await axios.post(
-        "http://localhost:5000/api/admin/login",
+        "https://uzcorpus-back.onrender.com/api/admin/login",
         inputsValue
       );
       setInputsValue({ email: "", password: "" });

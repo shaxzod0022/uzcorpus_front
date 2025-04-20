@@ -21,7 +21,7 @@ const Search = () => {
     try {
       setIsLoad(true);
       const response = await axios.get(
-        `http://localhost:5000/api/texts/search?q=${encodeURIComponent(value)}`
+        `https://uzcorpus-back.onrender.com/api/texts/search?q=${encodeURIComponent(value)}`
       );
 
       setSuccesMessage("Ma'lumot topildi");
