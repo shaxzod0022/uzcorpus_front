@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../assets/gerb_flag.png";
 import { useNavigate } from "react-router";
 const Header = () => {
   const navigate = useNavigate();
@@ -9,7 +8,11 @@ const Header = () => {
         onClick={() => navigate("/")}
         className="flex cursor-pointer items-center gap-5"
       >
-        <img className="sm:w-20 w-12 rounded-full" src={logo} alt="logo" />
+        <img
+          className="sm:w-20 w-12 rounded-full"
+          src="https://img.freepik.com/premium-vector/persian-green-golden-glossy-italic-arrow-shaped-letter-k-icon-white-background_95164-13151.jpg?semt=ais_hybrid&w=740"
+          alt="logo"
+        />
         <span className="sm:text-2xl text-lg font-bold text-white">
           KONKORDANSER
         </span>
