@@ -120,7 +120,7 @@ const SearchType = ({ documents, authors, types, subcorpuses }) => {
           </p>
         ) : (
           <>
-            <div className="flex items-center  flex-wrap justify-between w-full">
+            <div className="flex items-center gap-4 flex-wrap justify-between w-full">
               <div className="p-5 items-center flex flex-col gap-4 border-2 border-blue-300 sm:w-[43%] w-full rounded-md">
                 <h2 className="font-semibold text-xl mb-4 text-center">
                   Aynan so'z bo'yicha natijalari
