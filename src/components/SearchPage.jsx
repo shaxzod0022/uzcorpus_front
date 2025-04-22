@@ -12,7 +12,9 @@ const SearchPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://uzcorpus-back.onrender.com/api/texts");
+        const res = await axios.get(
+          "https://uzcorpus-back.onrender.com/api/texts"
+        );
         const data = res.data;
         setDocuments(data);
 
@@ -30,8 +32,8 @@ const SearchPage = () => {
   }, []);
 
   return (
-    <div className="container mx-auto mt-8">
-      <h1 className="text-2xl font-bold mb-4">Qidiruv sahifasi</h1>
+    <div className="container mx-auto mt-2">
+      <h1 className="text-2xl font-bold mb-4">Qidiruv</h1>
       <SearchType
         documents={documents}
         authors={authors}

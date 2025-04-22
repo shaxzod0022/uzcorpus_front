@@ -4,24 +4,24 @@ import { useNavigate } from "react-router";
 const Header = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex items-center sm:justify-between justify-center gap-5 flex-wrap mb-8">
+    <div className="flex bg-blue-600 items-center sm:justify-between justify-center gap-5 flex-wrap p-4 md:px-16 lg:px-40">
       <div
         onClick={() => navigate("/")}
         className="flex cursor-pointer items-center gap-5"
       >
-        <img className="sm:w-20 w-12 rounded-full" src={logo} alt="logo" />{" "}
-        <span className="sm:text-2xl text-lg font-bold text-blue-600">
-          O'zbek tili milliy korpusi
+        <img className="sm:w-20 w-12 rounded-full" src={logo} alt="logo" />
+        <span className="sm:text-2xl text-lg font-bold text-white">
+          KONKORDANSER
         </span>
       </div>
       <ul>
         <li>
           <a
-            className="text-blue-600 sm:text-lg text-md font-semibold transition-all duration-200 hover:text-white"
-            href="https://uz.wikipedia.org/wiki/O%CA%BBzbekiston"
+            className="text-white sm:text-lg text-md font-semibold transition-all duration-200 hover:text-blue-300"
+            href="https://uz.wikipedia.org/wiki/Konkordanser"
             target="_blank"
           >
-            O'zbekiston haqida
+            Konkordanser nima?
           </a>
         </li>
       </ul>
