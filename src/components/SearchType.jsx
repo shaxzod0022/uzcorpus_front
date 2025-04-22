@@ -46,11 +46,11 @@ const SearchType = ({ documents, authors, types, subcorpuses }) => {
 
   return (
     <div className="space-y-4">
-      <div className="flex flex-wrap items-center gap-4">
+      <div className="flex flex-wrap justify-between items-center gap-4">
         <select
           value={selectedAuthor}
           onChange={(e) => setSelectedAuthor(e.target.value)}
-          className="border p-2 rounded"
+          className="border p-2 sm:w-[30%] w-full rounded"
         >
           <option value="">Barcha mualliflar</option>
           {authors?.map((author) => (
@@ -63,7 +63,7 @@ const SearchType = ({ documents, authors, types, subcorpuses }) => {
         <select
           value={selectedType}
           onChange={(e) => setSelectedType(e.target.value)}
-          className="border p-2 rounded"
+          className="border p-2 rounded sm:w-[30%] w-full"
         >
           <option value="">Barcha janrlar</option>
           {types?.map((type) => (
@@ -76,11 +76,9 @@ const SearchType = ({ documents, authors, types, subcorpuses }) => {
         <select
           value={selectedSubcorpus}
           onChange={(e) => setSelectedSubcorpus(e.target.value)}
-          className="border p-2 rounded"
+          className="border p-2 rounded sm:w-[30%] w-full"
         >
-          <option value="" className="border-2 border-blue-300">
-            Barcha korpuslar
-          </option>
+          <option value="">Barcha korpuslar</option>
           {subcorpuses?.map((sub) => (
             <option key={sub} value={sub}>
               {sub}
@@ -88,20 +86,22 @@ const SearchType = ({ documents, authors, types, subcorpuses }) => {
           ))}
         </select>
 
-        <input
-          type="text"
-          placeholder="So‘z bo‘yicha qidiruv..."
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
-          className="border p-2 rounded flex-1"
-        />
+        <div className="sm:w-[80%] w-full flex-wrap flex items-center justify-center mx-auto gap-4">
+          <input
+            type="text"
+            placeholder="So‘z bo‘yicha qidiruv..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            className="border p-2 rounded flex-1 sm:w-[80%] w-full"
+          />
 
-        <button
-          onClick={handleSearch}
-          className="bg-blue-500 hover:bg-blue-300 active:scale-90 cursor-pointer transition-all duration-200 py-2 px-5 rounded-md text-white font-semibold"
-        >
-          Qidirish
-        </button>
+          <button
+            onClick={handleSearch}
+            className="bg-blue-500 hover:bg-blue-300 active:scale-90 cursor-pointer transition-all duration-200 py-2 px-5 rounded-md text-white font-semibold"
+          >
+            Qidirish
+          </button>
+        </div>
       </div>
 
       <div className="mt-4">
