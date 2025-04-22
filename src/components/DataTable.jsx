@@ -5,11 +5,11 @@ const fieldTranslations = {
   author: "Muallif nomi",
   yearCreated: "Yaratilgan yil",
   domain: "Faoliyat sohasi",
-  topic: "Matn mavzusi",
+  topic: "Hujjat mavzusi",
   eventLocationTime: "Zamon va joy",
-  genre: "Janr",
-  type: "Matn turi",
-  style: "Matn stili",
+  genre: "Hujjat turi",
+  type: "Hujjat janri",
+  style: "Hujjat stili",
   audienceAge: "Auditoriya yoshi",
   audienceLevel: "Auditoriya bilim darajasi",
   audienceSize: "Auditoriya hajmi",
@@ -49,7 +49,9 @@ const DataTableList = ({ data, newClass }) => {
                     {fieldTranslations[key] || key}
                   </td>
                   <td className="p-2 border">
-                    {typeof value === "string" && value.length > 100
+                    {typeof value === "object" && value !== null
+                      ? value.name || JSON.stringify(value)
+                      : typeof value === "string" && value.length > 100
                       ? value.slice(0, 100) + "..."
                       : value}
                   </td>
